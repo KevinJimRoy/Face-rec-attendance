@@ -7,7 +7,7 @@ import cv2,numpy as np
 
 title("Attendance")
 date = date_input("Enter the date")
-edit_attandance = text_input("Enter the name of one student you want to change the attendance of(IF there are multiple names seperate the names by a comma and space)")
+edit_attandance = text_input("Enter the name of one student you want to change the attendance of(IF there are multiple names seperate the names by a comma and space(eg Name1, Name2)")
 #a function to that lets the user take in an input image from which the face recogntition and maooing would happen
 def fun():
     img = file_uploader("To take attendance upload the image here")
