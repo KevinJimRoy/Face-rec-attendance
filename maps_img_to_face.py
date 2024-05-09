@@ -22,15 +22,15 @@ def img_map():
     new_rgb_location_pair = []
     new_face_encodings = []
     #
-    files = os.listdir("C:/Users/kevin/project/face_rec_py/student list")
-    directories = os.listdir("C:/Users/kevin/project/face_rec_py/extracted_faces")
+    files = os.listdir("path")#enter the path of your  file which has the name and img of all students(the file better be named student list)
+    directories = os.listdir("path of extracted faces")#enter the path of the extracted faces
     #read all the valid image type files in the list of directories and append them to a list
     for img in files:
         if img[-3:]=='jpg':
-            known_images.append(cv2.imread(f"C:/Users/kevin/project/face_rec_py/student list/{img}"))
+            known_images.append(cv2.imread(f"path of student list/{img}"))
     #read the images extracted from the group photo and append them all to a list 
     for i in range(len(directories)):
-        new_images.append(cv2.imread(f"C:/Users/kevin/project/face_rec_py/extracted_faces/{i+1}.jpg"))
+        new_images.append(cv2.imread(f"path of extracted faces/{i+1}.jpg"))
         
     #convert the images to RGB and then get locations of faces in each image, to convert it to its encoding
     for i in known_images:
